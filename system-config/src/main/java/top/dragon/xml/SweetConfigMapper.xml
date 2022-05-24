@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.dragon.mapper.SweetConfigMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="top.dragon.entity.SweetConfig">
+        <id column="config_id" property="configId" />
+        <result column="config_name" property="configName" />
+        <result column="config_type" property="configType" />
+        <result column="config_group" property="configGroup" />
+        <result column="config_value" property="configValue" />
+        <result column="config_details" property="configDetails" />
+        <result column="config_remarks" property="configRemarks" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        config_id, config_name, config_type, config_group, config_value, config_details, config_remarks
+    </sql>
+
+</mapper>

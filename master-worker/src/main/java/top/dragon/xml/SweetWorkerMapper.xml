@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.dragon.mapper.SweetWorkerMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="top.dragon.entity.SweetWorker">
+        <id column="worker_id" property="workerId" />
+        <result column="worker_uid" property="workerUid" />
+        <result column="worker_name" property="workerName" />
+        <result column="worker_avatar" property="workerAvatar" />
+        <result column="worker_phone" property="workerPhone" />
+        <result column="worker_password" property="workerPassword" />
+        <result column="worker_order_count" property="workerOrderCount" />
+        <result column="worker_area" property="workerArea" />
+        <result column="worker_address" property="workerAddress" />
+        <result column="worker_real_name" property="workerRealName" />
+        <result column="worker_hand_card" property="workerHandCard" />
+        <result column="worker_card_front" property="workerCardFront" />
+        <result column="worker_card_back" property="workerCardBack" />
+        <result column="worker_pay_deposit" property="workerPayDeposit" />
+        <result column="worker_finish_order_count" property="workerFinishOrderCount" />
+        <result column="worker_cancel_order_count" property="workerCancelOrderCount" />
+        <result column="worker_evaluate" property="workerEvaluate" />
+        <result column="worker_work_unit" property="workerWorkUnit" />
+        <result column="worker_work_address" property="workerWorkAddress" />
+        <result column="worker_work_telephone" property="workerWorkTelephone" />
+        <result column="worker_wallet" property="workerWallet" />
+        <result column="worker_promise" property="workerPromise" />
+        <result column="worker_is_show" property="workerIsShow" />
+        <result column="worker_status" property="workerStatus" />
+        <result column="worker_is_del" property="workerIsDel" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        worker_id, worker_uid, worker_name, worker_avatar, worker_phone, worker_password, worker_order_count, worker_area, worker_address, worker_real_name, worker_hand_card, worker_card_front, worker_card_back, worker_pay_deposit, worker_finish_order_count, worker_cancel_order_count, worker_evaluate, worker_work_unit, worker_work_address, worker_work_telephone, worker_wallet, worker_promise, worker_is_show, worker_status, worker_is_del
+    </sql>
+
+</mapper>

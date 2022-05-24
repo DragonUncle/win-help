@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.dragon.mapper.SweetNeedClassifyMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="top.dragon.entity.SweetNeedClassify">
+        <id column="server_classify_id" property="serverClassifyId" />
+        <result column="server_classify_name" property="serverClassifyName" />
+        <result column="server_classify_pid" property="serverClassifyPid" />
+        <result column="server_classify_is_show" property="serverClassifyIsShow" />
+        <result column="server_classify_is_del" property="serverClassifyIsDel" />
+        <result column="server_classify_create_time" property="serverClassifyCreateTime" />
+        <result column="server_classify_remark" property="serverClassifyRemark" />
+        <result column="server_classify_suggested_price" property="serverClassifySuggestedPrice" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        server_classify_id, server_classify_name, server_classify_pid, server_classify_is_show, server_classify_is_del, server_classify_create_time, server_classify_remark, server_classify_suggested_price
+    </sql>
+
+</mapper>

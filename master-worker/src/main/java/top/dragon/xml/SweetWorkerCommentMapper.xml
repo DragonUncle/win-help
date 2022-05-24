@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.dragon.mapper.SweetWorkerCommentMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="top.dragon.entity.SweetWorkerComment">
+        <id column="worker_comment_id" property="workerCommentId" />
+        <result column="worker_comment_uid" property="workerCommentUid" />
+        <result column="worker_comment_wid" property="workerCommentWid" />
+        <result column="worker_comment_evaluate" property="workerCommentEvaluate" />
+        <result column="worker_comment_details" property="workerCommentDetails" />
+        <result column="worker_comment_is_show" property="workerCommentIsShow" />
+        <result column="worker_comment_is_del" property="workerCommentIsDel" />
+        <result column="worker_comment_tipping" property="workerCommentTipping" />
+        <result column="worker_comment_create_time" property="workerCommentCreateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        worker_comment_id, worker_comment_uid, worker_comment_wid, worker_comment_evaluate, worker_comment_details, worker_comment_is_show, worker_comment_is_del, worker_comment_tipping,worker_comment_create_time
+    </sql>
+
+</mapper>

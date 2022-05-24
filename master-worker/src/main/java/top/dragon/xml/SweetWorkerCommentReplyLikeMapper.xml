@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.dragon.mapper.SweetWorkerCommentReplyLikeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="top.dragon.entity.SweetWorkerCommentReplyLike">
+        <result column="reply_like_rid" property="replyLikeRid" />
+        <result column="reply_like_uid" property="replyLikeUid" />
+        <result column="reply_like_create_time" property="replyLikeCreateTime" />
+        <result column="reply_like_is_show" property="replyLikeIsShow" />
+        <result column="reply_like_is_del" property="replyLikeIsDel" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        reply_like_rid, reply_like_uid, reply_like_create_time, reply_like_is_show, reply_like_is_del
+    </sql>
+
+</mapper>

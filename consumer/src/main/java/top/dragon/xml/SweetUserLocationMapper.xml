@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.dragon.mapper.SweetUserLocationMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="top.dragon.entity.SweetUserLocation">
+        <id column="location_id" property="locationId" />
+        <result column="location_uid" property="locationUid" />
+        <result column="location_name" property="locationName" />
+        <result column="location_area" property="locationArea" />
+        <result column="location_address" property="locationAddress" />
+        <result column="location_telephone" property="locationTelephone" />
+        <result column="location_is_default" property="locationIsDefault" />
+        <result column="location_flag" property="locationFlag" />
+        <result column="location_detail" property="locationDetail" />
+        <result column="location_remark" property="locationRemark" />
+        <result column="location_create_time" property="locationCreateTime" />
+        <result column="location_is_del" property="locationIsDel" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        location_id, location_uid, location_name, location_area, location_address, location_telephone, location_is_default, location_flag, location_detail, location_remark, location_create_time, location_is_del
+    </sql>
+
+</mapper>

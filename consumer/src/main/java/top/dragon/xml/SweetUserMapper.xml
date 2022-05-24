@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.dragon.mapper.SweetUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="top.dragon.entity.SweetUser">
+        <id column="user_id" property="userId" />
+        <result column="user_name" property="userName" />
+        <result column="user_phone" property="userPhone" />
+        <result column="user_password" property="userPassword" />
+        <result column="user_email" property="userEmail" />
+        <result column="user_open_id" property="userOpenId" />
+        <result column="user_alipay_id" property="userAlipayId" />
+        <result column="user_qq" property="userQq" />
+        <result column="user_birthday" property="userBirthday" />
+        <result column="user_identity_name" property="userIdentityName" />
+        <result column="user_identity_id" property="userIdentityId" />
+        <result column="user_create_time" property="userCreateTime" />
+        <result column="user_icon" property="userIcon" />
+        <result column="user_balance" property="userBalance" />
+        <result column="user_area" property="userArea" />
+        <result column="user_address" property="userAddress" />
+        <result column="user_sex" property="userSex" />
+        <result column="user_signature" property="userSignature" />
+        <result column="user_invite_code" property="userInviteCode" />
+        <result column="user_invitee_code" property="userInviteeCode" />
+        <result column="user_status" property="userStatus" />
+        <result column="user_is_del" property="userIsDel" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        user_id, user_name, user_phone, user_password, user_email, user_open_id, user_alipay_id, user_qq, user_birthday, user_identity_name, user_identity_id, user_create_time, user_icon, user_balance, user_area, user_address, user_sex, user_signature, user_invite_code, user_invitee_code, user_status, user_is_del
+    </sql>
+
+</mapper>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.dragon.mapper.SweetWorkerCommentReplyMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="top.dragon.entity.SweetWorkerCommentReply">
+        <id column="comment_reply_id" property="commentReplyId" />
+        <result column="comment_reply_pid" property="commentReplyPid" />
+        <result column="comment_reply_cid" property="commentReplyCid" />
+        <result column="comment_reply_uid" property="commentReplyUid" />
+        <result column="comment_reply_details" property="commentReplyDetails" />
+        <result column="comment_reply_is_show" property="commentReplyIsShow" />
+        <result column="comment_reply_is_del" property="commentReplyIsDel" />
+        <result column="comment_reply_create_time" property="commentReplyCreateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        comment_reply_id, comment_reply_pid, comment_reply_cid, comment_reply_uid, comment_reply_details, comment_reply_is_show, comment_reply_is_del, comment_reply_create_time
+    </sql>
+
+</mapper>

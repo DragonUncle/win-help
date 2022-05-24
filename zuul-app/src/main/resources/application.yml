@@ -1,0 +1,14 @@
+
+server:
+  port: 8081
+spring:
+
+  application:
+    name: zuul-app
+  main:
+    allow-bean-definition-overriding: true
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://127.0.0.1:8761/eureka/

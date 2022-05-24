@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.dragon.mapper.SweetNeedOrderMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="top.dragon.entity.SweetNeedOrder">
+        <id column="need_id" property="needId" />
+        <result column="need_name" property="needName" />
+        <result column="need_uid" property="needUid" />
+        <result column="need_wid" property="needWid" />
+        <result column="need_create_time" property="needCreateTime" />
+        <result column="need_deposit" property="needDeposit" />
+        <result column="need_real_price" property="needRealPrice" />
+        <result column="need_pay_price" property="needPayPrice" />
+        <result column="need_transaction_price" property="needTransactionPrice" />
+        <result column="need_appoint_start_time" property="needAppointStartTime" />
+        <result column="need_appoint_end_time" property="needAppointEndTime" />
+        <result column="need_balance_time" property="needBalanceTime" />
+        <result column="need_user_state" property="needUserState" />
+        <result column="need_worker_state" property="needWorkerState" />
+        <result column="need_ultimately_time" property="needUltimatelyTime" />
+        <result column="need_user_is_del" property="needUserIsDel" />
+        <result column="need_worker_is_del" property="needWorkerIsDel" />
+        <result column="need_cancel_type" property="needCancelType" />
+        <result column="need_workplace" property="needWorkplace" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        need_id, need_name, need_uid, need_wid, need_create_time, need_deposit, need_real_price, need_pay_price, need_transaction_price, need_appoint_start_time, need_appoint_end_time, need_balance_time, need_user_state, need_worker_state, need_ultimately_time, need_user_is_del, need_worker_is_del, need_cancel_type, need_workplace
+    </sql>
+
+</mapper>

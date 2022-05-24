@@ -1,0 +1,124 @@
+
+
+#
+#spring.profiles.active=test
+#
+
+
+server:
+  port: 10007
+
+spring:
+  application:
+    name: merchant
+  main:
+    allow-bean-definition-overriding: true
+  shardingsphere:
+    enabled: true
+    props:
+      sql-show: true
+    datasource:
+      names: master,slave0,slave1
+      common:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://192.168.1.10:3306/win-help?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai&characterEncoding=utf-8
+        username: root
+        password: ws101122..
+        type: com.zaxxer.hikari.HikariDataSource
+      master:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://192.168.1.10:3306/win-help?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai&characterEncoding=utf-8
+        username: root
+        password: ws101122..
+        type: com.zaxxer.hikari.HikariDataSource
+      slave0:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://192.168.1.10:3306/win-help?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai&characterEncoding=utf-8
+        username: root
+        password: ws101122..
+        type: com.zaxxer.hikari.HikariDataSource
+      slave1:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://192.168.1.10:3306/win-help?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai&characterEncoding=utf-8
+        username: root
+        password: ws101122..
+        type: com.zaxxer.hikari.HikariDataSource
+    rules:
+      replica-query:
+        load-balancers:
+          # 负载均衡算法
+          round-robin:
+            type: ROUND_ROBIN
+            # 这里是最神经病的地方, 不配置就报错! 配置吧又不知道配置什么
+            props:
+              # 你也可以配置 xxx: 123, yyy: 4342 但是必须得有一个属性, 随便编
+              default: 0
+        data-sources:
+          # 这个名字就随便起
+          ms:
+            # 主库
+            primary-data-source-name: master
+            # 从库
+            replica-data-source-names: slave0,slave1
+            load-balancer-name: round_robin
+
+      sharding:
+        # 分片算法配置
+        sharding-algorithms:
+          table-user-inline:
+            type: INLINE
+            props:
+              # 分片算法的行表达式
+              algorithm-expression: sweet_user_$->{ user_id % 5 }
+          table-user-location-inline:
+            type: INLINE
+            props:
+              # 分片算法的行表达式
+              algorithm-expression: sweet_user_location_$->{ location_id % 5 }
+        # 分布式序列算法配置
+        key-generators:
+          snowflake:
+            type: SNOWFLAKE
+            props:
+              workerId: 12345
+        tables:
+          sweet_user:
+            # 行表达式标识符可以使用 ${...} 或 $->{...}，但前者与 Spring 本身的属性文件占位符冲突，因此在 Spring 环境中使用行表达式标识符建议使用 $->{...}
+            actual-data-nodes: ms.sweet_user_$->{0..4}
+            # 分表策略
+            table-strategy:
+              standard:
+                # 分片列名称
+                sharding-column: user_id
+                # 分片算法名称
+                sharding-algorithm-name: table-user-inline
+          sweet_user_location:
+            # 行表达式标识符可以使用 ${...} 或 $->{...}，但前者与 Spring 本身的属性文件占位符冲突，因此在 Spring 环境中使用行表达式标识符建议使用 $->{...}
+            actual-data-nodes: ms.sweet_user_location_$->{0..4}
+            # 分表策略
+            table-strategy:
+              standard:
+                # 分片列名称
+                sharding-column: location_id
+                # 分片算法名称
+                sharding-algorithm-name: table-user-inline
+      readwrite-splitting:
+        data-sources:
+          ms:
+            type: static
+            props:
+              write-data-source-name: master
+              read-data-source-names: slave0,slave1
+              load-balancer-name: round_robin
+
+
+
+mybatis-plus:
+  mapper-locations: classpath*:xml/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+eureka:
+  client:
+    service-url:
+      default-zone: http://127.0.0.1:8761/eureka/

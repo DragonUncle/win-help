@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.2.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>top.dragon</groupId>
+    <artifactId>win-help</artifactId>
+    <version>0.0.1</version>
+    <name>win-help</name>
+    <packaging>pom</packaging>
+    <description>Demo project for Spring Boot</description>
+    <modules>
+        <module>commonality</module>
+        <module>registration-center</module>
+        <module>system-config</module><!-- 系统配置10004 -->
+        <module>file-management</module> <!-- 文件管理10005 -->
+        <module>consumer</module><!-- 消费者10006 -->
+        <module>merchant</module><!-- 商户10007 -->
+        <module>merchandise</module><!-- 商品10008 -->
+        <module>goods-order</module><!-- 订单10009 -->
+        <module>master-worker</module><!-- 工人模块10010 -->
+        <module>needs-server</module><!-- 需求服务10011 -->
+        <module>ali-pay</module><!-- 支付宝服务10012 -->
+        <module>wechat-pay</module><!-- 微信服务10013 -->
+        <module>ali-cloud</module><!-- 阿里云服务10014 -->
+        <module>zuul-app</module><!-- 网关服务8090 -->
+    </modules>
+    <properties>
+        <java.version>11</java.version>
+        <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
+        <spring-cloud-zuul.version>2.2.5.RELEASE</spring-cloud-zuul.version>
+        <springfox-swagger2.version>2.8.0</springfox-swagger2.version>
+        <mybatis-plus.version>3.5.1</mybatis-plus.version>
+        <shardingsphere.version>5.1.0</shardingsphere.version>
+        <fastjson.version>1.2.68</fastjson.version>
+
+
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.shardingsphere</groupId>
+                <artifactId>shardingsphere-jdbc-core-spring-boot-starter</artifactId>
+                <version>${shardingsphere.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${springfox-swagger2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${springfox-swagger2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+                <version>${spring-cloud-zuul.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>

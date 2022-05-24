@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.dragon.mapper.SweetGoodsShopMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="top.dragon.entity.SweetGoodsShop">
+        <id column="shop_id" property="shopId" />
+        <result column="shop_name" property="shopName" />
+        <result column="shop_uid" property="shopUid" />
+        <result column="shop_category" property="shopCategory" />
+        <result column="shop_boss" property="shopBoss" />
+        <result column="shop_introduce" property="shopIntroduce" />
+        <result column="shop_area" property="shopArea" />
+        <result column="shop_address" property="shopAddress" />
+        <result column="shop_longitude_latitude" property="shopLongitudeLatitude" />
+        <result column="shop_official" property="shopOfficial" />
+        <result column="shop_evaluate" property="shopEvaluate" />
+        <result column="shop_business_hours" property="shopBusinessHours" />
+        <result column="shop_license" property="shopLicense" />
+        <result column="shop_corpn_identity_card_front" property="shopCorpnIdentityCardFront" />
+        <result column="shop_corpn_identity_card_back" property="shopCorpnIdentityCardBack" />
+        <result column="shop_atth" property="shopAtth" />
+        <result column="shop_telephone" property="shopTelephone" />
+        <result column="shop_create_time" property="shopCreateTime" />
+        <result column="shop_audit_time" property="shopAuditTime" />
+        <result column="shop_bank_card_id" property="shopBankCardId" />
+        <result column="shop_bank_card_open_address" property="shopBankCardOpenAddress" />
+        <result column="shop_bank_card_name" property="shopBankCardName" />
+        <result column="shop_bank_card_belonger" property="shopBankCardBelonger" />
+        <result column="shop_alipay_id" property="shopAlipayId" />
+        <result column="shop_alipay_name" property="shopAlipayName" />
+        <result column="shop_status" property="shopStatus" />
+        <result column="shop_is_show" property="shopIsShow" />
+        <result column="shop_is_del" property="shopIsDel" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        shop_id, shop_name, shop_uid, shop_category, shop_boss, shop_introduce, shop_area, shop_address, shop_longitude_latitude, shop_official, shop_evaluate, shop_business_hours, shop_license, shop_corpn_identity_card_front, shop_corpn_identity_card_back, shop_atth, shop_telephone, shop_create_time, shop_audit_time, shop_bank_card_id, shop_bank_card_open_address, shop_bank_card_name, shop_bank_card_belonger, shop_alipay_id, shop_alipay_name, shop_status, shop_is_show, shop_is_del
+    </sql>
+
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.dragon.mapper.SweetUserAttentionMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="top.dragon.entity.SweetUserAttention">
+        <id column="user_attention_uid" property="userAttentionUid" />
+        <result column="user_attention_aid" property="userAttentionAid" />
+        <result column="user_attention_create_time" property="userAttentionCreateTime" />
+        <result column="user_attention_cancel_time" property="userAttentionCancelTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        user_attention_uid, user_attention_aid, user_attention_create_time, user_attention_cancel_time
+    </sql>
+
+</mapper>

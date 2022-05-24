@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.dragon.mapper.SweetNeedOrderClassifyMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="top.dragon.entity.SweetNeedOrderClassify">
+        <result column="need_order_classify_oid" property="needOrderClassifyOid" />
+        <result column="need_order_classify_cid" property="needOrderClassifyCid" />
+        <result column="need_order_classify_number" property="needOrderClassifyNumber" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        need_order_classify_oid, need_order_classify_cid, need_order_classify_number
+    </sql>
+
+</mapper>
