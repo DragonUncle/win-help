@@ -76,7 +76,7 @@ CREATE TABLE `sweet_bank_card`  (
 -- ----------------------------
 -- Records of sweet_bank_card
 -- ----------------------------
-INSERT INTO `sweet_bank_card` VALUES (1, '3217993000300799056', '姚继龙', '2021-02-03', '2029-10-10', '0', '江苏省徐州市邳州是支行', '14752169639', '******', '******', '********？****？？？', '2021-04-26 03:16:57', 10000, 0);
+INSERT INTO `sweet_bank_card` VALUES (1, '3217993000300799056', '阿龙', '2021-02-03', '2029-10-10', '0', '江苏省徐州市邳州是支行', '14752169639', '******', '******', '********？****？？？', '2021-04-26 03:16:57', 10000, 0);
 
 -- ----------------------------
 -- Table structure for sweet_bank_card_type
@@ -136,9 +136,9 @@ CREATE TABLE `sweet_config`  (
 -- Records of sweet_config
 -- ----------------------------
 INSERT INTO `sweet_config` VALUES (1, 'aliPayServerUrl', 'serverUrl', 'AliPay', 'https://openapi.alipay.com/gateway.do', NULL, '网页支付宝服务地址');
-INSERT INTO `sweet_config` VALUES (2, 'aliPayAppId', 'appId', 'AliPay', '2021001193632900', NULL, '网页支付宝appId');
-INSERT INTO `sweet_config` VALUES (3, 'aliPayPrivateKey', 'privateKey', 'AliPay', 'MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCYvOEBoil9+kPKTF83xZFHj2jur3pYZA6FlvzAD8/DqKch96i+T7XFJAbTPtp05q/aFJIblFVCKu18Q6ZLWS2Nck4bxvqEgiMhEXorMaLiOhvH0PpUMc4lo+nEmPJAzUgN0/JRcz1KaE9m5ORlQhK7QVoJ/hjGashpy3dEb9IYZZEQTE2cqbhmhng3BW8otBnYxOJN/sr09JeaAENa++H9lwCHaWNOe0I3ynpXANbczU1U9lxFq6gHIDMm4166c1Skc7GcFdGvgkd8HchFNi5zFt+Lqgjh9TujgEjFcnaybnaKZVsVOuo0SJMd4+/Z7FdbzeS3IAYfx02yaqaK8ZwtAgMBAAECggEAY5K3SZ5TWHqgWTEi3jQhuzpGGV0y8I8CXJsLWZa1RwQbOWzAiJlkkgojnPIb7xw5Rn4kpnA0iPd9bYaY0gRoSw9a1ocI6PwCNNu0/pXUb5GcbM7Tc7Ioh6dtjip7vD1YHROwpOLw8SJBqX3NXCoQFh3Lujn6ItiYoUfxEB+qIxaCdYPdoFGBgMC0n4AwAZKM8e2RX9NgWxmr+H99DKVEU/amSbtZrQK8qom9TgA77L4tgQ57/CtAyZBt/kAVAoZvshSotE5YONOk5Z2BReB9zVRosuZ9WrS+ej/YSSSq5J1jhEB3Q+SGdpxyOdnXgN+pibLmPBRpYNKa7gsWSUMiAQKBgQD7uKmSANEZZdGMu3DHJyuCAEXxMsTSvnXocI5Gi1xEZk1b8MyeYtJr6AClgugp04Wm+jjMJbq4XqNtNLniGjU2TFyt5ZSB1IVDHSL8sjXDWpGEyuQGIw+30SOxJY/ZixXNclUUR820DyEupDISx6ZMBEe5Hvzg2neQoJBnkY4bgQKBgQCbVYAqTmtTWslLtb6KvlHzZEOB3C6gQZp/bh1YDzmCZIyWf9JbhcEeLogMWaN6Apkw3BRocvfc6rgz36KLM0wDIE9eZi28KxZvnGAU1vroZcWj8/2F9xG0EuQ7S/6C8yfvMb6ccnv0iLVT0P0wwTKM7LAC8KNu9mxmG1NSC0QGrQKBgQC8j78OrOf184y+tGat+MyhrJy4KsS/7YaboT0i4SAz6MKIXeCZwQNJa9iYI3DQbDARPh2v549wrwwTMU0Rb3pu+1LtvS2697z/4mKkEsctWLnrVKTtZ/RNSTBIcg/I8WRaqwvKjmMsP60mqD8OTFppVUd5CBp8QYsRXwXtX16pgQKBgC8wrH0t0cFDBYBwuHBiHXd58GBVSfz5sTwhcdy801Xfwi4+quOPIPpQXJiT6uw4Od30HmcU9mQxEsD/odv0O5V/jV06YY6W8Hv739y06wkLUh3bFBxM0R4J1ziEf8+8m1c5n5Tb2viRR7Us+p6DMx5JEbfy71PYnVnv10JHleUJAoGAJqdWRR6LzqeqhWPDf6jtVkKA93srexPivhchHfso4zwf3r8+KNMbOxT2kgG/Un5GhefnyodwghCnUKvkHzIn3EJWI6TN4htx4Y4ojCbWogbgiwsEuvO8TaVuOu/VdhbhU3SHNd7LqFEfRI+IyiELLOxGb1tUZ/Y+0zoYBVckjvQ=', NULL, '网页支付宝支付私钥');
-INSERT INTO `sweet_config` VALUES (4, 'aliPayPublicKey', 'publicKey', 'AliPay', 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmLzhAaIpffpDykxfN8WRR49o7q96WGQOhZb8wA/Pw6inIfeovk+1xSQG0z7adOav2hSSG5RVQirtfEOmS1ktjXJOG8b6hIIjIRF6KzGi4jobx9D6VDHOJaPpxJjyQM1IDdPyUXM9SmhPZuTkZUISu0FaCf4YxmrIact3RG/SGGWREExNnKm4ZoZ4NwVvKLQZ2MTiTf7K9PSXmgBDWvvh/ZcAh2ljTntCN8p6VwDW3M1NVPZcRauoByAzJuNeunNUpHOxnBXRr4JHfB3IRTYucxbfi6oI4fU7o4BIxXJ2sm52imVbFTrqNEiTHePv2exXW83ktyAGH8dNsmqmivGcLQIDAQAB', NULL, '网页支付宝支付公钥');
+INSERT INTO `sweet_config` VALUES (2, 'aliPayAppId', 'appId', 'AliPay', '', NULL, '网页支付宝appId');
+INSERT INTO `sweet_config` VALUES (3, 'aliPayPrivateKey', 'privateKey', 'AliPay', '', NULL, '网页支付宝支付私钥');
+INSERT INTO `sweet_config` VALUES (4, 'aliPayPublicKey', 'publicKey', 'AliPay', '', NULL, '网页支付宝支付公钥');
 INSERT INTO `sweet_config` VALUES (5, 'aliPaySignType', 'signType', 'AliPay', 'RSA2', NULL, '网页支付宝加密类型');
 INSERT INTO `sweet_config` VALUES (6, 'aliPayFormat', 'format', 'AliPay', 'json', NULL, '网页传输方式');
 INSERT INTO `sweet_config` VALUES (7, 'aliPayNotifyUrl', 'notifyUrl', 'AliPay', 'afdsfsd', NULL, '网页回调通知地址');
@@ -157,10 +157,10 @@ INSERT INTO `sweet_config` VALUES (29, 'SmsSecret', 'secret', 'AliSmsChinaCode',
 INSERT INTO `sweet_config` VALUES (30, 'SmsDomain', 'domain', 'AliSmsChinaCode', 'dysmsapi.aliyuncs.com', NULL, '阿里云短信域名');
 INSERT INTO `sweet_config` VALUES (31, 'SmsTemplateName', 'templateName', 'AliSmsChinaCode', '上海欧助文化交流有限公司', NULL, '阿里云短信模板名称');
 INSERT INTO `sweet_config` VALUES (32, 'SmsTimeOut', 'timeOut', 'AliSmsChinaCode', '5', NULL, '阿里云短信超时');
-INSERT INTO `sweet_config` VALUES (33, 'SmsTemplate', 'template', 'AliSmsChinaCode', 'SMS_184816553', NULL, '阿里云短信模板号');
+INSERT INTO `sweet_config` VALUES (33, 'SmsTemplate', 'template', 'AliSmsChinaCode', '', NULL, '阿里云短信模板号');
 INSERT INTO `sweet_config` VALUES (34, 'MailHost', 'host', 'MailConfig', 'smtp.qq.com', NULL, '邮箱地址');
-INSERT INTO `sweet_config` VALUES (35, 'MailUserName', 'userName', 'MailConfig', '565352671@qq.com', NULL, '邮箱账号');
-INSERT INTO `sweet_config` VALUES (36, 'MailPassword', 'password', 'MailConfig', 'wjxtpdivcwbnbdae', NULL, '邮箱密码');
+INSERT INTO `sweet_config` VALUES (35, 'MailUserName', 'userName', 'MailConfig', '', NULL, '邮箱账号');
+INSERT INTO `sweet_config` VALUES (36, 'MailPassword', 'password', 'MailConfig', '', NULL, '邮箱密码');
 INSERT INTO `sweet_config` VALUES (37, 'MailProtocol', 'protocol', 'MailConfig', 'smtp', NULL, '邮箱协议');
 INSERT INTO `sweet_config` VALUES (38, 'FilePath', 'path', 'FileConfig', '/home/upload/', NULL, '文件路径');
 INSERT INTO `sweet_config` VALUES (39, 'urlPath', 'url', 'FileConfig', 'http://127.0.0.1:8055/file', NULL, '访问文件网址');
