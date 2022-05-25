@@ -152,8 +152,8 @@ INSERT INTO `sweet_config` VALUES (23, 'Host', 'redisHost', 'RedisConfig', '127.
 INSERT INTO `sweet_config` VALUES (24, 'Password', 'redisPassword', 'RedisConfig', '', NULL, 'Redis密码');
 INSERT INTO `sweet_config` VALUES (25, 'Port', 'redisPort', 'RedisConfig', '6379', NULL, 'Redis端口');
 INSERT INTO `sweet_config` VALUES (27, 'SmsRegionId', 'regionId', 'AliSmsChinaCode', 'cn-hangzhou', NULL, '阿里云短信区域ID');
-INSERT INTO `sweet_config` VALUES (28, 'SmsAccessKeyId', 'accessKeyId', 'AliSmsChinaCode', 'LTAI4FzDj9urtxyaTPvzW3dN', NULL, '阿里云短信通道KeyId');
-INSERT INTO `sweet_config` VALUES (29, 'SmsSecret', 'secret', 'AliSmsChinaCode', 'NftLN1oCdE7Kq1BtksCn3WfypaCCTi', NULL, '阿里云短信密钥');
+INSERT INTO `sweet_config` VALUES (28, 'SmsAccessKeyId', 'accessKeyId', 'AliSmsChinaCode', '', NULL, '阿里云短信通道KeyId');
+INSERT INTO `sweet_config` VALUES (29, 'SmsSecret', 'secret', 'AliSmsChinaCode', '', NULL, '阿里云短信密钥');
 INSERT INTO `sweet_config` VALUES (30, 'SmsDomain', 'domain', 'AliSmsChinaCode', 'dysmsapi.aliyuncs.com', NULL, '阿里云短信域名');
 INSERT INTO `sweet_config` VALUES (31, 'SmsTemplateName', 'templateName', 'AliSmsChinaCode', '上海欧助文化交流有限公司', NULL, '阿里云短信模板名称');
 INSERT INTO `sweet_config` VALUES (32, 'SmsTimeOut', 'timeOut', 'AliSmsChinaCode', '5', NULL, '阿里云短信超时');
